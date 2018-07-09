@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <m-header ></m-header>
+    <m-header title="小白会记账"></m-header>
   	<router-view></router-view>
     <tab></tab>
   </div>
