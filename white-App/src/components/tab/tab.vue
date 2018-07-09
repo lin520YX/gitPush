@@ -1,6 +1,6 @@
 <template>
   <div class="tab">
-    <router-link tag="div" class="tab-item" to="/recommend">
+    <router-link tag="div" class="tab-item" to="/main">
     <i class="icon-home"></i>
     <span class="tab-link">首页</span>
     </router-link>

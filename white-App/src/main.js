@@ -2,10 +2,15 @@ import 'babel-polyfill'
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import VueLazyLoad from 'vue-lazyload'
 
 import fastclick from 'fastclick'
-fastclick.attach(document.body)
 import 'common/stylus/index.styl'
+Vue.use(VueLazyLoad,{
+  error:'http://placehold.it/375x175',
+  loading:'http://placehold.it/375x175'
+})
+fastclick.attach(document.body)
 
 /* eslint-disable no-new */
 new Vue({

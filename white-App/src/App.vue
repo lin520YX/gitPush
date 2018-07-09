@@ -1,11 +1,10 @@
 <template>
   <div id="app">
-    <m-header ></m-header>
+    <m-header title="小白会做账"></m-header>
   	<router-view></router-view>
     <tab></tab>
   </div>
 </template>
-
 <script>
 import Tab from 'components/tab/tab'
 import MHeader from 'components/m-header/m-header'
