@@ -1,21 +1,39 @@
 <template>
    <div class="main">
-        <slider>
-            <div class="w-slider" v-for="item in recommends">
-                <img :src='item.img' @load="loadImage" alt=""/>
-            </div>    
-        </slider>
-        <div class="video">
-            <img v-lazy="'placehold.it/375x175'" alt=""/>
-        </div>
-        <div class="s_btn">
-            开始体验
-        </div>
+        <scroll ref="scroll" class="scroll-main">
+            <div>
+                <slider>
+                    <div class="w-slider" v-for="item in recommends">
+                        <img :src='item.img' @load="loadImage" alt=""/>
+                    </div>    
+                </slider>
+            <div class="main-list">
+                    <!-- 功能介绍 -->
+                <span>功能介绍</span>
+                <div class="video">
+                    <div class="c-slider">
+                        <img class="img" v-lazy="'placehold.it/375x175'" alt=""/>
+                        <img class="img"v-lazy="'placehold.it/375x175'" alt=""/>
+                        <img class="img"v-lazy="'placehold.it/375x175'" alt=""/>
+                        <img class="img"v-lazy="'placehold.it/375x175'" alt=""/>
+                    </div>
+                </div>
+                <span>视频介绍</span>
+                <div class="video">
+                    <img v-lazy="'placehold.it/375x175'" alt=""/>
+                </div>
+            </div>
+                <div class="s_btn">
+                    开始体验
+                </div>
+            </div>
+        </scroll>
    </div>
 </template>
 
 <script type="text/ecmascript-6">
   import Slider from 'base/slider/slider'
+  import Scroll from 'base/scroll/scroll'
   export default {
       data(){
           return {
@@ -26,7 +44,9 @@
          }
       },
       created(){
-
+         setTimeout(()=>{
+             this.$refs.scroll.refresh()
+         },20)
       },
       methods:{
         loadImage() {
@@ -39,7 +59,8 @@
         }
       },
       components: {
-      Slider
+      Slider,
+      Scroll
     }
   }
 </script>
@@ -51,29 +72,47 @@
         width: 100%
         top: 44px
         bottom: 0
+    .scroll-main
+        height: 100%
+        overflow: hidden
     .w-slider
         width  :100%
         height :175px
         overflow: hidden
+    .main-list
+         margin:20px
+        span 
+            display flex
+            height 40px
+            align-items center
+            color $public-color
+            font-size 18px
+            font-weight 300
     .video
-        margin:20px
-    img
-        display :block
-        width:100%
-        height :100%
+       width calc(100vw - 40px)
+      .c-slider
+       height calc(15vh)
+       overflow-x scroll  
+       overflow-y hidden
+      .img
+        width 100px
+        height 15vh
+        margin-right 5vw
+        float left
     .s_btn
         margin 0 auto
-        width: 115px
-        height: 115px
+        width: 75vw
+        height: 50px
         text-align center
-        line-height 115px
-        border-radius: 50%
+        line-height 50px
+        border-radius 6px
         background $public-color
         color #fff
         font-weight 300
         font-size 18px
         touch-action: none
         transition: all .15s ease-in-out
+        box-shadow 0px 0px 6px rgba(200,200,200,.7)
         &:active
             box-shadow 0px 0px 10px rgba(30,30,30,.7)
 </style>
