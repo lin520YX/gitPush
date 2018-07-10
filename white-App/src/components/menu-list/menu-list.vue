@@ -1,20 +1,30 @@
 <template>
-  <div id="singer">
-    <div class="menu yellow">视频学习<span></span></div>
-    <div class="menu blue">期初建账<span></span></div>
-    <div class="menu green">登录做账<span></span></div>
-    <div class="menu red">查账<span></span></div>
-    <div class="menu orange">寻找后台协助<span></span></div>
+  <div :id="listType" class="menu-list-custom">
+    <div v-for="(item, i) in data" class="menu" :style="{ borderColor: item.color }">
+      <router-link :to="item.link">{{item.name}}</router-link>
+      <span></span>
+    </div>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
-  export default {}
+  export default {
+    props: {
+      listType: {
+        type: String,
+        default: 'singer'
+      },
+      data: {
+        type: Array,
+        default: () => []
+      }
+    }
+  }
 </script>
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
 
-  #singer
+  .menu-list-custom
     height:calc(100vh - 94px)
     display:flex
     flex-direction:column
@@ -28,17 +38,23 @@
       width:92vw
       border-radius:5px
       margin:20px auto
-      display:flex
-      align-items:center
       border-left-width: 12px
       border-left-style: solid
       padding: 0 20px
-      overflow: hidden;
+      overflow: hidden
+      border-color: transparent
       box-shadow: 1px 1px 5px #a1a1a1
       transition: all .1s ease-in-out
       &:active
         box-shadow: 0 0 2px #a1a1a1
         transform: translate(1px, 1px)
+      a
+        height: 100%
+        width: 100%
+        display: flex;
+        align-items: center;
+  #mainMenu
+    .menu
       span
         position: absolute
         right: 10px;
@@ -61,15 +77,14 @@
           background:#CCCDCD
           transform:rotate(-45deg) translateY(4px)
           border-radius:8px
-      &.yellow
-        border-color:#FF9933
-      &.blue
-        border-color:#29ABE2
-      &.green
-        border-color:#8CC63E
-      &.red
-        border-color:#C2282D
-      &.orange
-        border-color:#FF9833
+  #subMenu
+    .menu
+      background: #E3F6F5
+      &:first-child
+        background: #9CE1DE
+      a
+        justify-content:center
+      span
+        display:none
 
 </style>
