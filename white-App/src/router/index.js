@@ -5,11 +5,14 @@ import Menu from '../components/menu/menu';
 import Main from '../components/main/main';
 
 Vue.use(Router)
-
+    
 export default new Router({
     routes: [{
+        path: '/',
+        redirect: '/main'
+    }, {
         path: '/main',
-        component: Main
+        component: Main,
     }, {
         path: '/menu',
         redirect: '/menu/mainMenu'
