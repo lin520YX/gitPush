@@ -50,7 +50,7 @@
         height 30px;
         line-height 30px;
      .tab-link
-         font-size 2px;
+         font-size 12px;
          height 20px;
          line-height 20px;
     
