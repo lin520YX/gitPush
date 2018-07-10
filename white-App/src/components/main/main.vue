@@ -1,8 +1,10 @@
 <template>
-   <div>
-        <div class="w-slider">
-            <img v-lazy="'placehold.it/375x175'" alt=""/>
-        </div>
+   <div class="main">
+        <slider>
+            <div class="w-slider" v-for="item in recommends">
+                <img :src='item.img' alt=""/>
+            </div>    
+        </slider>
         <div class="video">
             <img v-lazy="'placehold.it/375x175'" alt=""/>
         </div>
@@ -13,15 +15,33 @@
 </template>
 
 <script type="text/ecmascript-6">
-  export default {}
+  import Slider from 'base/slider/slider'
+  export default {
+      data(){
+          return {
+            recommends: [
+                {img:'http://placehold.it/375x175'},
+                {img:'http://placehold.it/375x175'}
+            ],
+         }
+      },
+      components: {
+      Slider
+    }
+  }
 </script>
 
 <style scoped lang="stylus" rel="stylesheet/stylus">  
     @import "~common/stylus/variable" 
+    .main
+        position: fixed
+        width: 100%
+        top: 44px
+        bottom: 0
     .w-slider
-        width  :100vw;
-        height :175px;
-       
+        width  :100%
+        height :175px
+        overflow: hidden
     .video
         margin:20px
     img

@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" @touchmove.prevent>
     <m-header title="小白会做账"></m-header>
   	<router-view></router-view>
     <tab></tab>

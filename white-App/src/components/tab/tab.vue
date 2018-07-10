@@ -9,12 +9,12 @@
     
       <span class="tab-link">小白会做账</span>
     </router-link>
-    <router-link tag="div" class="tab-item" to="/rank">
+    <router-link tag="div" class="tab-item" to="/community">
     <i class="icon-bubblechat"></i>
       <span class="tab-link">小白社区
       </span>
     </router-link>
-    <router-link tag="div" class="tab-item" to="/search">
+    <router-link tag="div" class="tab-item" to="/personCenter">
         <i class="icon-shareperson"></i>
       <span class="tab-link">我的</span>
     </router-link>
