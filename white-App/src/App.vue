@@ -1,7 +1,9 @@
 <template>
   <div id="app" @touchmove.prevent>
     <m-header title="小白会做账"></m-header>
-  	<router-view></router-view>
+  	<keep-alive>
+    <router-view></router-view>
+    </keep-alive>
     <tab></tab>
   </div>
 </template>

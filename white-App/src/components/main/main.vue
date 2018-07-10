@@ -1,7 +1,7 @@
 <template>
    <div class="main">
         <scroll ref="scroll" class="scroll-main">
-            <div>
+         <div>
                 <slider>
                     <div class="w-slider" v-for="item in recommends">
                         <img :src='item.img' @load="loadImage" alt=""/>
@@ -16,17 +16,24 @@
                         <img class="img"v-lazy="'placehold.it/375x175'" alt=""/>
                         <img class="img"v-lazy="'placehold.it/375x175'" alt=""/>
                         <img class="img"v-lazy="'placehold.it/375x175'" alt=""/>
+                        
                     </div>
                 </div>
-                <span>视频介绍</span>
+                 <span>功能介绍</span>
                 <div class="video">
-                    <img v-lazy="'placehold.it/375x175'" alt=""/>
+                    <div class="c-slider">
+                        <img class="img" v-lazy="'placehold.it/375x175'" alt=""/>
+                        <img class="img"v-lazy="'placehold.it/375x175'" alt=""/>
+                        <img class="img"v-lazy="'placehold.it/375x175'" alt=""/>
+                        <img class="img"v-lazy="'placehold.it/375x175'" alt=""/>
+                        
+                    </div>
                 </div>
             </div>
                 <div class="s_btn">
                     开始体验
                 </div>
-            </div>
+         </div>
         </scroll>
    </div>
 </template>
@@ -71,7 +78,7 @@
         position: fixed
         width: 100%
         top: 44px
-        bottom: 0
+        bottom: 55px;
     .scroll-main
         height: 100%
         overflow: hidden
@@ -90,15 +97,18 @@
             font-weight 300
     .video
        width calc(100vw - 40px)
-      .c-slider
        height calc(15vh)
        overflow-x scroll  
        overflow-y hidden
+      .c-slider
+       width 1000px
+       height calc(15vh)
       .img
-        width 100px
-        height 15vh
-        margin-right 5vw
-        float left
+       width 100px
+       height 15vh
+       margin-right 5vw
+       display block
+       float left  
     .s_btn
         margin 0 auto
         width: 75vw
