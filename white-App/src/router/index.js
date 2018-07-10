@@ -1,24 +1,24 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Singer from '../components/Singer/Singer';
+import Menu from '../components/menu/menu';
 import Main from '../components/main/main';
 
 Vue.use(Router)
     
 export default new Router({
-	routes: [
-		{
-			path: '/',
-		  redirect: '/main'
-		},
-		{
-      path: '/main',
-      component: Main,
-    },
-		, {
-			path: '/singer',
-			name: 'singer',
-			component: Singer
-		}]
+    routes: [{
+        path: '/',
+        redirect: '/main'
+    }, {
+        path: '/main',
+        component: Main,
+    }, {
+        path: '/menu',
+        redirect: '/menu/mainMenu'
+    }, {
+        path: '/menu/:id',
+        component: Menu,
+        props: true
+    }]
 })

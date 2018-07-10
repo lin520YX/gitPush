@@ -4,7 +4,7 @@
     <i class="icon-home"></i>
     <span class="tab-link">首页</span>
     </router-link>
-    <router-link tag="div" class="tab-item" to="/singer">
+    <router-link tag="div" class="tab-item" to="/menu">
        <i class="icon-redpacket"></i>
     
       <span class="tab-link">小白会做账</span>
