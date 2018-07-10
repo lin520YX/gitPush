@@ -2,7 +2,7 @@
    <div class="main">
         <slider>
             <div class="w-slider" v-for="item in recommends">
-                <img :src='item.img' alt=""/>
+                <img :src='item.img' @load="loadImage" alt=""/>
             </div>    
         </slider>
         <div class="video">
@@ -24,6 +24,19 @@
                 {img:'http://placehold.it/375x175'}
             ],
          }
+      },
+      created(){
+
+      },
+      methods:{
+        loadImage() {
+                if (!this.checkloaded) {
+                this.checkloaded = true
+            }
+        },
+        getData(){
+            // 获取轮播图数据
+        }
       },
       components: {
       Slider

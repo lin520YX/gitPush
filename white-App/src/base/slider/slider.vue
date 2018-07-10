@@ -133,6 +133,7 @@
   @import "~common/stylus/variable"
 
   .slider
+    position relative
     min-height: 1px
     .slider-group
       position: relative
@@ -164,9 +165,9 @@
         width: 8px
         height: 8px
         border-radius: 50%
-        background: $color-text-l
+        background: #000
         &.active
           width: 20px
           border-radius: 5px
-          background: $color-text-ll
+          background: $public-color
 </style>
