@@ -33,9 +33,18 @@
       align-items:center
       border-left-width: 12px
       border-left-style: solid
+      overflow: hidden;
+      box-shadow: 1px 1px 5px #a1a1a1
+      transition: all .1s ease-in-out
+      &:active
+        box-shadow: 0 0 2px #a1a1a1
+        transform: translate(1px, 1px)
       span
         position: absolute
-        right: 10px
+        right: 10px;
+        top: 50%;
+        height: 10px;
+        margin-top: -5px;
         &:before
           content:''
           display:block
