@@ -29,10 +29,10 @@
       border-radius:5px
       margin:20px auto
       display:flex
-      justify-content:center
       align-items:center
       border-left-width: 12px
       border-left-style: solid
+      padding: 0 20px
       overflow: hidden;
       box-shadow: 1px 1px 5px #a1a1a1
       transition: all .1s ease-in-out
