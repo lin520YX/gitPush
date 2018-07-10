@@ -21,6 +21,7 @@
     align-items:center
     overflow:auto
     padding:30px 0
+    user-select:none
     .menu
       position:relative
       height:55px
