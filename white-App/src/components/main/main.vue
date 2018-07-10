@@ -40,6 +40,7 @@
         font-weight 300
         font-size 18px
         touch-action: none
+        transition: all .15s ease-in-out
         &:active
-            box-shadow 0px 0px 10px rgba(30,30,30,.7) 
+            box-shadow 0px 0px 10px rgba(30,30,30,.7)
 </style>
