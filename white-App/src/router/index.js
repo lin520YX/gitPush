@@ -3,14 +3,19 @@ import Router from 'vue-router'
 
 import Menu from '../components/menu/menu';
 import Main from '../components/main/main';
-
+import Login from '../components/login/login'
 Vue.use(Router)
     
 export default new Router({
     routes: [{
         path: '/',
-        redirect: '/main'
-    }, {
+        redirect: '/login'
+    },
+    {
+        path: '/login',
+        component: Login,
+    },
+    {
         path: '/main',
         component: Main,
     }, {
