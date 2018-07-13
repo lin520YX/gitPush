@@ -35,7 +35,7 @@
         }, {
           name: "查账",
           color: "#C2282D",
-          link: "/menu/subMenu"
+          link: "/MakeAccount"
         }, {
           name: "寻找后台协助",
           color: "#FF9833",
