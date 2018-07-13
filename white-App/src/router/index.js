@@ -20,7 +20,7 @@ export default new Router({
         component: Main,
     }, {
         path: '/menu',
-        redirect: '/menu/mainMenu'
+        redirect: '/menu/mainMenuA'
     }, {
         path: '/menu/:id',
         component: Menu,
