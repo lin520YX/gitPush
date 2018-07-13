@@ -1,12 +1,16 @@
 <template>
-  <menu-list :listType="id" :data="dataAll[id]"></menu-list>
+  <div class="menu-tab">
+    <menu-list :listType="id" :data="dataAll[id]"></menu-list>
+  </div>
 </template>
 
 <script type="text/ecmascript-6">
   import MenuList from 'components/menu-list/menu-list'
+  import Scroll from 'base/scroll/scroll'
   export default {
     components: {
-      MenuList
+      MenuList, 
+      Scroll
     },
     props: {
       id: {
@@ -65,5 +69,9 @@
 </script>
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
-
+  .menu-tab
+    position: fixed;
+    width: 100%;
+    top: 44px;
+    bottom: 55px;
 </style>

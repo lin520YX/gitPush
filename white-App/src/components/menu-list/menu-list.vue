@@ -1,14 +1,22 @@
 <template>
-  <div :id="listType" class="menu-list-custom">
-    <div v-for="(item, i) in data" class="menu" :style="{ borderColor: item.color }">
-      <router-link :to="item.link">{{item.name}}</router-link>
-      <span></span>
-    </div>
-  </div>
+    <scroll ref="scroll" :id="listType" class="scroll-main">
+      <div>
+        <div v-for="(item, i) in data" class="menu" :style="{ borderColor: item.color }">
+          <router-link :to="item.link">{{item.name}}</router-link>
+          <span></span>
+        </div>
+      </div>
+    </scroll>
 </template>
 
 <script type="text/ecmascript-6">
+  import Scroll from 'base/scroll/scroll'
   export default {
+    created(){
+       setTimeout(()=>{
+           this.$refs.scroll.refresh()
+       },20)
+    },
     props: {
       listType: {
         type: String,
@@ -18,19 +26,18 @@
         type: Array,
         default: () => []
       }
+    }, 
+    components: {
+      Scroll
     }
   }
 </script>
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
 
-  .menu-list-custom
-    height:calc(100vh - 94px)
-    display:flex
-    flex-direction:column
-    align-items:center
-    overflow:auto
-    padding:30px 0
+  .scroll-main
+    height: 100%
+    overflow: hidden
     .menu
       position:relative
       height:55px
