@@ -1,6 +1,6 @@
 <template>
   <div id="app" @touchmove.prevent>
-    <m-header title="小白会做账"></m-header>
+    <m-header :title="title"></m-header>
   	<keep-alive>
     <transition name="fade">
     <router-view></router-view>
@@ -12,10 +12,16 @@
 <script>
 import Tab from 'components/tab/tab'
 import MHeader from 'components/m-header/m-header'
+
 export default {
   components:{
       Tab,
       MHeader
+  }, 
+  data: function() {
+    return {
+      title: '小白会做账'
+    }
   }
 }
 </script>

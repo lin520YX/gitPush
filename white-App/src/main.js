@@ -6,6 +6,7 @@ import VueLazyLoad from 'vue-lazyload'
 
 import fastclick from 'fastclick'
 import 'common/stylus/index.styl'
+
 Vue.use(VueLazyLoad,{
   error:'http://placehold.it/375x175',
   loading:'http://placehold.it/375x175'

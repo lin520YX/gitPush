@@ -5,6 +5,7 @@ import Menu from '../components/menu/menu';
 import Main from '../components/main/main';
 import Login from '../components/login/login'
 import MakeAccount from '../components/makeAccount/makeAccount'
+import CheckAccount from '../components/echarts/test'
 
 Vue.use(Router)
     
@@ -12,24 +13,33 @@ export default new Router({
     routes: [{
         path: '/',
         redirect: '/login'
-    },
-    {
+    }, {
         path: '/login',
         component: Login,
-    },
-    {
+    }, {
         path: '/main',
         component: Main,
     }, {
         path: '/menu',
-        redirect: '/menu/mainMenu'
+        redirect: '/menu/mainMenuA'
     }, {
         path: '/menu/:id',
         component: Menu,
         props: true,
-    },{
+    }, {
         path:'/MakeAccount',
-        component:MakeAccount
-    
-}]
+        component: MakeAccount
+    }, {
+        path:'/CheckAccount',
+        component: CheckAccount
+    }, {
+        path:'/askForHelp',
+        component: Menu
+    }, {
+        path:'/howToSetParams',
+        component: Menu
+    }, {
+        path:'/setInitialAccount',
+        component: Menu
+    }]
 })
