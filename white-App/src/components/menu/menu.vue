@@ -33,11 +33,11 @@
         }, {
           name: "查账",
           color: "#C2282D",
-          link: "/main/makeAccount"
+          link: "/MakeAccount"
         }, {
           name: "寻找后台协助",
           color: "#FF9833",
-          link: "/main/askForHelp"
+          link: "/askForHelp"
         }],
         mainMenuB: [{
           name: "如何设置参数",

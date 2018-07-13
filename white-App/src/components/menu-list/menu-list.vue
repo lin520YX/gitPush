@@ -1,6 +1,6 @@
 <template>
   <div class="menu-tab">
-    <scroll ref="scroll" :id="listType" class="scroll-main">
+    <scroll ref="scroll" :id="listType" class="scroll-main" :data='data'>
       <div>
         <div v-for="(item, i) in data" class="baseground">
           <div class="menu" :style="{ borderColor: item.color }">
@@ -42,7 +42,7 @@
     position: fixed;
     width: 100%;
     top: 44px;
-    bottom: 55px;
+    bottom: 50px;
     .scroll-main
       height: 100%
       overflow: hidden

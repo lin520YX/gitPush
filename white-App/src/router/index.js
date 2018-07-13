@@ -4,6 +4,8 @@ import Router from 'vue-router'
 import Menu from '../components/menu/menu';
 import Main from '../components/main/main';
 import Login from '../components/login/login'
+import MakeAccount from '../components/makeAccount/makeAccount'
+
 Vue.use(Router)
     
 export default new Router({
@@ -24,6 +26,10 @@ export default new Router({
     }, {
         path: '/menu/:id',
         component: Menu,
-        props: true
-    }]
+        props: true,
+    },{
+        path:'/MakeAccount',
+        component:MakeAccount
+    
+}]
 })
