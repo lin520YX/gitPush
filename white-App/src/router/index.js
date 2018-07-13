@@ -5,6 +5,7 @@ import Menu from '../components/menu/menu';
 import Main from '../components/main/main';
 import Login from '../components/login/login'
 import MakeAccount from '../components/makeAccount/makeAccount'
+import CheckAccount from '../components/echarts/test'
 
 Vue.use(Router)
     
@@ -30,7 +31,7 @@ export default new Router({
         component: MakeAccount
     }, {
         path:'/CheckAccount',
-        component: Menu
+        component: CheckAccount
     }, {
         path:'/askForHelp',
         component: Menu
