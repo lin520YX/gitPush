@@ -2,7 +2,9 @@
   <div id="app" @touchmove.prevent>
     <m-header title="小白会做账"></m-header>
   	<keep-alive>
+    <transition name="fade">
     <router-view></router-view>
+    </transition>
     </keep-alive>
     <tab></tab>
   </div>

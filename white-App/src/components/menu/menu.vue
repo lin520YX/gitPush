@@ -73,5 +73,5 @@
     position: fixed;
     width: 100%;
     top: 44px;
-    bottom: 55px;
+    bottom: 50px;
 </style>

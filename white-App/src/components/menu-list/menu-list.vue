@@ -1,5 +1,5 @@
 <template>
-    <scroll ref="scroll" :id="listType" class="scroll-main">
+    <scroll ref="scroll" :id="listType" class="scroll-main" :data='data'>
       <div>
         <div v-for="(item, i) in data" class="menu" :style="{ borderColor: item.color }">
           <router-link :to="item.link">{{item.name}}</router-link>
