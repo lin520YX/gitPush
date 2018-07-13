@@ -12,12 +12,10 @@ export default new Router({
     routes: [{
         path: '/',
         redirect: '/login'
-    },
-    {
+    }, {
         path: '/login',
         component: Login,
-    },
-    {
+    }, {
         path: '/main',
         component: Main,
     }, {
@@ -27,9 +25,20 @@ export default new Router({
         path: '/menu/:id',
         component: Menu,
         props: true,
-    },{
+    }, {
         path:'/MakeAccount',
-        component:MakeAccount
-    
-}]
+        component: MakeAccount
+    }, {
+        path:'/CheckAccount',
+        component: Menu
+    }, {
+        path:'/askForHelp',
+        component: Menu
+    }, {
+        path:'/howToSetParams',
+        component: Menu
+    }, {
+        path:'/setInitialAccount',
+        component: Menu
+    }]
 })

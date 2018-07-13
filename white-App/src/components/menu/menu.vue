@@ -1,5 +1,5 @@
 <template>
-    <menu-list :listType="id.slice(0, -1)" :data="dataAll[id]"></menu-list>
+    <menu-list :listType="id.slice(0, -1)" :data="allData[id]"></menu-list>
 </template>
 
 <script type="text/ecmascript-6">
@@ -17,7 +17,7 @@
       }
     },
     data: () => ({
-      dataAll: {
+      allData: {
         mainMenuA: [{
           name: "视频学习",
           color: "#FF9933",
@@ -25,15 +25,15 @@
         }, {
           name: "期初建账",
           color: "#29ABE2",
-          link: "/menu/mainMenuA"
+          link: "/setInitialAccount"
         }, {
           name: "登陆做账",
           color: "#8CC63E",
-          link: "/main"
+          link: "/MakeAccount"
         }, {
           name: "查账",
           color: "#C2282D",
-          link: "/MakeAccount"
+          link: "/CheckAccount"
         }, {
           name: "寻找后台协助",
           color: "#FF9833",
