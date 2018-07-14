@@ -28,6 +28,7 @@
 
 <script type="text/ecmascript-6">
 	import Scroll from 'base/scroll/scroll'
+	import MHeader from 'components/m-header/m-header'
 	export default {
 		created(){
 			 setTimeout(()=>{
@@ -72,7 +73,8 @@
 			}
 		}, 
 		components: {
-			Scroll
+			Scroll, 
+			MHeader
 		}
 	}
 </script>
