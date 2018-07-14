@@ -1,4 +1,6 @@
 <template>
+  <div>
+       <m-header :title="'做账'" :back='true' ></m-header>
   <div class="make-account">
        <scroll  ref="scroll" class="scroll-main">
     <div>
@@ -59,13 +61,16 @@
     </div>    
    </scroll>
   </div>
+  </div>
 </template>
 
 <script type="text/ecmascript-6">
   import Scroll from 'base/scroll/scroll'
+  import MHeader from 'components/m-header/m-header'
   export default {
      components:{
-         Scroll
+         Scroll,
+         MHeader
      },
      created(){
          setTimeout(()=>{
@@ -78,10 +83,14 @@
 <style scoped lang="stylus" rel="stylesheet/stylus">
   @import "~common/stylus/variable"
   .make-account
-        position: fixed
+        position: absolute
         width: 100%
         top: 44px
-        bottom: 55px;
+        left 0
+        right 0
+        bottom 0
+        background #ffffff
+        z-index 100
   .scroll-main
         height: 100%
         overflow: hidden

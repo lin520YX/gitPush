@@ -14,7 +14,7 @@
             <span>密码</span>
             <input type="password" placeholder="请输入密码">
         </div>
-        <button>登录</button>
+        <button @click='goMain'>登录</button>
         <button>新手入门登录</button>
         <div class="memo">
             <span>注册</span>
@@ -25,7 +25,13 @@
 
 <script type="text/ecmascript-6">
   export default {
-     
+      methods:{
+          goMain(){
+              this.$router.push(
+                  '/main'
+              )
+          }
+      }
   }
 </script>
 
@@ -36,6 +42,12 @@
     height calc(100vh-94px)
     background  #fff
     padding 20px
+    position absolute
+    top 0
+    left 0
+    bottom 0
+    right 0
+    z-index 100
     .mobileLogin 
         height 40px
         display flex

@@ -1,13 +1,20 @@
 <template>
   <div>
-    <ve-line :data="chartData"></ve-line>
+        <m-header :title="'查账'" :back='true' ></m-header>
+        <div class="checkAccount">
+          <div>
+                <ve-line :data="chartData"></ve-line>
+          </div>
+        </div>
+      
   </div>
 </template>
 
 <script type="text/ecmascript-6">
   import VeLine from 'v-charts/lib/line.common'
+  import MHeader from 'components/m-header/m-header'
   export default {
-    components: { VeLine },
+    components: { VeLine,MHeader },
     data: function() {
       return {
         chartData: {
@@ -27,5 +34,13 @@
 </script>
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
-
+  .checkAccount
+    position absolute
+    top 44px
+    left 0
+    right 0
+    bottom 0
+    background #ffffff
+    z-index 1000 
+    
 </style>

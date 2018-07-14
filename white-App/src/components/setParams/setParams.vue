@@ -1,5 +1,9 @@
 <template>
-    <div class="setParams">
+
+   <transition name='fade' >
+    <div>
+               <m-header :title="'小白会做账'" :back='true' ></m-header>
+        <div class="setParams">
        <scroll ref="scroll" class="scroll-main">
            <div>
                 <div class="video">
@@ -62,13 +66,17 @@
 
        </scroll>
     </div>
+    </div>
+   </transition>
 </template>
 
 <script type="text/ecmascript-6">
   import Scroll from 'base/scroll/scroll'
+  import MHeader from 'components/m-header/m-header'
   export default {
       components:{
-          Scroll
+          Scroll,
+          MHeader
       }
      
   }
@@ -76,12 +84,19 @@
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
   @import "~common/stylus/variable"
+  .fade-enter-active
+      transition: all 0.3s
+  .fade-enter
+      transform: translate3d(100%, 0, 0)
   .setParams
-        position: fixed
+        position: absolute
         width: 100%
-        top: 44px
-        bottom: 55px;
-        padding 10px
+        top:44px
+        bottom 0
+        left:0
+        right 0
+        z-index 100
+        background #fff
         .video
             height 180px
             line-height 180px

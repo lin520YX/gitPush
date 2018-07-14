@@ -1,14 +1,20 @@
 <template>
-    <menu-list :listType="id.slice(0, -1)" :data="allData[id]"></menu-list>
+  <div>
+        <m-header :title="'小白会做账'" ></m-header>
+        <menu-list :listType="id.slice(0, -1)" :data="allData[id]"></menu-list>
+  </div>
 </template>
 
 <script type="text/ecmascript-6">
   import MenuList from 'components/menu-list/menu-list'
   import Scroll from 'base/scroll/scroll'
+  import MHeader from 'components/m-header/m-header'
+
   export default {
     components: {
       MenuList, 
-      Scroll
+      Scroll,
+      MHeader
     },
     props: {
       id: {

@@ -1,10 +1,7 @@
 <template>
   <div id="app" @touchmove.prevent>
-    <m-header :title="title"></m-header>
   	<keep-alive>
-    <transition name="fade">
     <router-view></router-view>
-    </transition>
     </keep-alive>
     <tab></tab>
   </div>
@@ -27,4 +24,5 @@ export default {
 </script>
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
+
 </style>
