@@ -8,6 +8,7 @@ import MakeAccount from '../components/makeAccount/makeAccount'
 import CheckAccount from '../components/echarts/test'
 import AskForHelp from '../components/askForHelp/askForHelp'
 import SetParams from '../components/setParams/setParams'
+import PersonalCenter from '../components/personalCenter/personalCenter'
 
 Vue.use(Router)
     
@@ -43,5 +44,8 @@ export default new Router({
     }, {
         path:'/setInitialAccount',
         component: SetParams
+    }, {
+        path:'/personalCenter',
+        component: PersonalCenter
     }]
 })
