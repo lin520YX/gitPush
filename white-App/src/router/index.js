@@ -6,6 +6,8 @@ import Main from '../components/main/main';
 import Login from '../components/login/login'
 import MakeAccount from '../components/makeAccount/makeAccount'
 import CheckAccount from '../components/echarts/test'
+import AskForHelp from '../components/askForHelp/askForHelp'
+import SetParams from '../components/setParams/setParams'
 
 Vue.use(Router)
     
@@ -34,12 +36,12 @@ export default new Router({
         component: CheckAccount
     }, {
         path:'/askForHelp',
-        component: Menu
+        component: AskForHelp 
     }, {
         path:'/howToSetParams',
-        component: Menu
+        component: SetParams
     }, {
         path:'/setInitialAccount',
-        component: Menu
+        component: SetParams
     }]
 })

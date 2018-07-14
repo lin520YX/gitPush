@@ -46,7 +46,7 @@
         }, {
           name: "如何建立初始数据",
           color: "#29ABE2",
-          link: "/menu/subMenuA"
+          link: "/howToSetParams"
         }, {
           name: "如何做账",
           color: "#8CC63E",
