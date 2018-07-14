@@ -1,25 +1,28 @@
- <template>
-	<div class="center-tab">
-		<scroll ref="scroll" class="scroll-main" :data='itemList'>
-			<div>
-				<div class="avatar-name">
-					<img src="http://dummyimage.com/100x100/4d494d/686a82.gif&text=Avatar" alt="Avatar" />
-					<p>小白</p>
+<template>
+	<div>
+		<m-header :title="'个人中心'" ></m-header>
+		<div class="center-tab">
+			<scroll ref="scroll" class="scroll-main" :data='itemList'>
+				<div>
+					<div class="avatar-name">
+						<img src="http://dummyimage.com/100x100/4d494d/686a82.gif&text=Avatar" alt="Avatar" />
+						<p>小白</p>
+					</div>
+					<div class="item-list">
+						<p v-for="(item, i) in itemList">
+							<router-link :to="item.link">
+								<span :class="'icon-'+item.icon"></span>
+								{{item.name}}
+								<i></i>
+							</router-link>
+						</p>
+					</div>
+					<div class="logout">
+						<button>退出</button>
+					</div>
 				</div>
-				<div class="item-list">
-					<p v-for="(item, i) in itemList">
-						<router-link :to="item.link">
-							<span :class="'icon-'+item.icon"></span>
-							{{item.name}}
-							<i></i>
-						</router-link>
-					</p>
-				</div>
-				<div class="logout">
-					<button>退出</button>
-				</div>
-			</div>
-		</scroll>
+			</scroll>
+		</div>
 	</div>
 </template>
 
