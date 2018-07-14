@@ -1,5 +1,7 @@
 <template>
-    <div class="askForHelp">
+    <div>
+        <m-header :title="'寻求后台帮助'" :back='true'></m-header>
+        <div class="askForHelp">
         <div class="help-hint">
                 提示：请以匀速的语速，完整说出或写出你需要协助的内容
         </div>
@@ -27,13 +29,16 @@
             </div>
         </scroll>    
     </div>
+    </div>
 </template>
 
 <script type="text/ecmascript-6">
   import Scroll from 'base/scroll/scroll'
+  import MHeader from 'components/m-header/m-header'
   export default {
       components:{
-          Scroll
+          Scroll,
+          MHeader
       }
      
   }
@@ -42,10 +47,14 @@
 <style scoped lang="stylus" rel="stylesheet/stylus">
   @import "~common/stylus/variable"
   .askForHelp
-        position: fixed
+        position: absolute
         width: 100%
         top: 44px
-        bottom: 55px;
+        bottom: 0
+        left 0
+        right 0
+        z-index 100
+        background #fff
   .scroll-main
         height: 100%
         overflow: hidden

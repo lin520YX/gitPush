@@ -1,6 +1,9 @@
 <template>
   <div class="m-header">
-      {{title}}
+    <i @click='gotoback' v-if='back'><</i>
+      <slot>
+          {{title}}
+      </slot>
   </div>
 </template>
 
@@ -10,7 +13,16 @@
           title:{
             type:String,
             default:'小白会做账'
+          },
+          back:{
+             type:Boolean,
+            default:false
           }
+      },
+      methods:{
+        gotoback(){
+          this.$router.go(-1)
+        }
       }
   }
 </script>
@@ -27,5 +39,8 @@
     background : $public-color
     font-size: 18px
     overflow:hidden
-   
+    position relative
+    i 
+      position absolute
+      left 20px
 </style>

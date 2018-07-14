@@ -1,5 +1,7 @@
 <template>
-   <div class="main">
+<div>
+        <m-header :title="'首页'" ></m-header>
+    <div class="main">
         <scroll ref="scroll" class="scroll-main">
          <div>
                 <slider>
@@ -36,11 +38,15 @@
          </div>
         </scroll>
    </div>
+</div>
+   
 </template>
 
 <script type="text/ecmascript-6">
   import Slider from 'base/slider/slider'
   import Scroll from 'base/scroll/scroll'
+  import MHeader from 'components/m-header/m-header'
+
   export default {
       data(){
           return {
@@ -67,7 +73,8 @@
       },
       components: {
       Slider,
-      Scroll
+      Scroll,
+      MHeader
     }
   }
 </script>
