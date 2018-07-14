@@ -80,7 +80,7 @@
 	.center-tab
 		position: fixed
 		width: 100%
-		top: 44px
+		top: 0
 		bottom: 50px
 		.scroll-main
 			height: 100%

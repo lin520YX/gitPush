@@ -1,6 +1,6 @@
 <template>
   <div class="m-header">
-    <i @click='gotoback' v-if='back'><</i>
+    <i @click='gotoback' v-if='back' class="icon-fanhui"></i>
       <slot>
           {{title}}
       </slot>
@@ -42,5 +42,7 @@
     position relative
     i 
       position absolute
+      font-size 30px
       left 20px
+      top 7px
 </style>

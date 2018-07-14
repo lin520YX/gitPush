@@ -18,7 +18,6 @@
                         <img class="img"v-lazy="'placehold.it/375x175'" alt=""/>
                         <img class="img"v-lazy="'placehold.it/375x175'" alt=""/>
                         <img class="img"v-lazy="'placehold.it/375x175'" alt=""/>
-                        
                     </div>
                 </div>
                  <span>功能介绍</span>
