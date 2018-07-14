@@ -14,7 +14,7 @@
       <span class="tab-link">小白社区
       </span>
     </router-link>
-    <router-link tag="div" class="tab-item" to="/personCenter">
+    <router-link tag="div" class="tab-item" to="/personalCenter">
         <i class="icon-shareperson"></i>
       <span class="tab-link">我的</span>
     </router-link>
